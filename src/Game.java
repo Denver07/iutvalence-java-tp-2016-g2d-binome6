@@ -1,7 +1,12 @@
 
 public class Game {
-	Bateau Aircraftcarrier = new Bateau(Bateau.AIRCRAFT_CARRIER);
-	Bateau Aircraftcarrier2 = new AircraftCarrier();
+	Bateau Aircraftcarrier = new AircraftCarrier();
+	Bateau ShipBattle = new ShipBattle();
+	Bateau Destroyer = new Destroyer();
+	Bateau PatrolBoat = new PatrolBoat();
+	Bateau Submarine = new Submarine();
+	
+	
 	
 	public Game(/* TODO Parameters? */) {
 		// TODO Auto-generated method stub	
