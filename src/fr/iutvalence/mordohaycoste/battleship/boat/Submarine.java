@@ -1,5 +1,6 @@
+package fr.iutvalence.mordohaycoste.battleship.boat;
 
-public class Submarine extends Bateau {
+public class Submarine extends Boat {
 
 	private static final int SUBMARINE = 3;
 

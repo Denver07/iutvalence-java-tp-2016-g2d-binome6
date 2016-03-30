@@ -1,3 +1,4 @@
+package fr.iutvalence.mordohaycoste.battleship;
 
 public class Case {
 	//Attribut Tiré ou pas, et ensuite bateaux ou pas.
