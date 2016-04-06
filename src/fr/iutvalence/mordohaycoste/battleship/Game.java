@@ -25,7 +25,7 @@ public class Game {
 		Grid Grid2_2 = new Grid(2,2);
 		Scanner saisieUtilisateur = new Scanner(System.in); 
 		
-		System.out.println("Please enter the position of the Aircraft Carrier ");
+		/*System.out.println("Please enter the position of the Aircraft Carrier ");
 		int AircraftCarrier_int = saisieUtilisateur.nextInt();
 		System.out.println("Please enter the position of the Ship 0Battle :");
 		int ShipBattle_int = saisieUtilisateur.nextInt();
@@ -34,11 +34,17 @@ public class Game {
 		System.out.println("Please enter the position of the Patrol Boat ");
 		int PatrolBoat_int = saisieUtilisateur.nextInt();
 		System.out.println("Please enter the position of the Submarine ");
-		int Submarine_int = saisieUtilisateur.nextInt();
+		int Submarine_int = saisieUtilisateur.nextInt();*/
+		
+		int aircraftX = 0;
+		int aircraftY = 0;
+		Direction aircraftD = Direction.HORIZONTAL;
+		Grid1_1.putBoat(Aircraftcarrier, aircraftX, aircraftY, aircraftD);
 		
 /*
 		 for(i=casedebut;i<casemaxbateau;i++){
 			Grid1_1.Case[i][j].occupee= true;
+			
 		}
 		
 */
