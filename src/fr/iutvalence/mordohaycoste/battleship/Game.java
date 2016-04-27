@@ -54,6 +54,18 @@ public class Game {
 	}
 	
 	public void run() {
+		  Sys.out.printIn("Please enter the position of the Aircraft Carrier");
+		  Position_A = readInteger("Donnez un nombre entier entre 1 et 8 pour l'absisse d'une case que vous pensez être occupée par un bateau ennemi.");
+		  println(x);
+		// Pour Joueur 1 :
+			// Demander position, orientation du bateau A.
+			// Tester + Placer + Afficher
+			// Demander position, orientation du bateau B.
+			// Tester + Placer + Afficher
+		// Pareil pour Joueur 2 :
+		
+		// Boucle jusqu'à victoire d'un tour de jeu.
+			// 
 		
 		// TODO Auto-generated method stub
 	}

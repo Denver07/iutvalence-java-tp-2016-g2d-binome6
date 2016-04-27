@@ -11,11 +11,11 @@ public class Grid {
 	private final Case[][] grid;
 	
 	public Grid(int player, int numgrille){
-		int x,y;
+		int i,j;
 		this.grid = new Case[WIDTH][HEIGHT];
 		for(i=0;i<WIDTH;i++){
-			for(j=0;j<HEIGHT;j++){
-				Case[i][j]= new Case();
+			for(j = 0;j<HEIGHT;j++){
+				this.grid[i][j].presence= false;
 			}
 		}
 	}
@@ -26,14 +26,14 @@ public class Grid {
 		 int i;
 		 if(direction == HORIZONTAL){
 			 for(i=y;i<y+boat.health();i++){
-				//	grid[x][i].occupee= true;
+				this.grid[x][i].presence= true;
 					
 				
 			 }
 		 }
 		 else{
 			 for(i=x;i<x+boat.health();i++){
-					//Grid1_1.Case[i][y].occupee= true;
+					this.grid[i][y].presence= true;
 					
 				
 			 }
