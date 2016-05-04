@@ -13,32 +13,45 @@ public class Grid {
 	public Grid(int player, int numgrille){
 		int i,j;
 		this.grid = new Case[WIDTH][HEIGHT];
+		
 		for(i=0;i<WIDTH;i++){
 			for(j = 0;j<HEIGHT;j++){
-				this.grid[i][j].presence= false;
+				this.grid[i][j] = new Case();
 			}
 		}
 	}
 	
 	// TODO Placer un bateau
 	
-	public void putBoat(Boat boat, int x, int y, Direction direction) {
+	public int putBoat(Boat boat, int x, int y, Direction direction) {
 		 int i;
 		 if(direction == HORIZONTAL){
 			 for(i=y;i<y+boat.health();i++){
-				this.grid[x][i].presence= true;
-					
-				
+				 if(this.grid[x][i]==null){
+					 this.grid[x][i].setBoat(boat);
+				 }
+				 else{
+					 return(0);
+				 }
 			 }
 		 }
 		 else{
 			 for(i=x;i<x+boat.health();i++){
-					this.grid[i][y].presence= true;
+				 if(this.grid[i][y]==null){
+					 this.grid[i][y].setBoat(boat);
+				 }
+				 else{
+					 return(0);
+				 }
 					
 				
 			 }
 		 }
 			
-		
+		return(1);
+	}
+	
+	public void shot(int x, int y) {
+		grid[x][y].shot();
 	}
 }
