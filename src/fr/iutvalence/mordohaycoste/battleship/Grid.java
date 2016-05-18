@@ -40,16 +40,17 @@ public class Grid {
 		 }
 		 else{
 			 for(i=x;i<x+boat.health();i++){
-				 if(this.grid[i][y].isEmpty()){
-					 this.grid[i][y].setBoat(boat);
-				 }
-				 else{
+					
+				 if(!this.grid[i][y].isEmpty()){
 					 return false;
 				 }
-					
-				
 			 }
-		 }
+			 
+			 for(i=x;i<x+boat.health();i++){
+				 this.grid[i][y].setBoat(boat);
+			 }
+			 
+			 }
 			
 		return true;
 	}
