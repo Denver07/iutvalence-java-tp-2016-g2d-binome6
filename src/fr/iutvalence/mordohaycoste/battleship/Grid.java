@@ -7,6 +7,8 @@ import static fr.iutvalence.mordohaycoste.battleship.Direction.*;
 public class Grid {
 	public static final int WIDTH=10;
 	public static final int HEIGHT=10;
+	public static int numplayer;
+	public static int numgrille;
 	
 	private final Case[][] grid;
 	
@@ -23,32 +25,33 @@ public class Grid {
 	
 	// TODO Placer un bateau
 	
-	public int putBoat(Boat boat, int x, int y, Direction direction) {
+	public boolean putBoat(Boat boat, int x, int y, Direction direction) {
 		 int i;
 		 if(direction == HORIZONTAL){
 			 for(i=y;i<y+boat.health();i++){
-				 if(this.grid[x][i]==null){
-					 this.grid[x][i].setBoat(boat);
+				 if(!this.grid[x][i].isEmpty()){
+					 return false;
 				 }
-				 else{
-					 return(0);
-				 }
+			 }
+			 
+			 for(i=y;i<y+boat.health();i++){
+				 this.grid[x][i].setBoat(boat);
 			 }
 		 }
 		 else{
 			 for(i=x;i<x+boat.health();i++){
-				 if(this.grid[i][y]==null){
+				 if(this.grid[i][y].isEmpty()){
 					 this.grid[i][y].setBoat(boat);
 				 }
 				 else{
-					 return(0);
+					 return false;
 				 }
 					
 				
 			 }
 		 }
 			
-		return(1);
+		return true;
 	}
 	
 	public void shot(int x, int y) {

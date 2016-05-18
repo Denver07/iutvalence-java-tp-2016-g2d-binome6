@@ -16,6 +16,10 @@ public class Case {
 		boat.hit();
 	}
 
+	public boolean isEmpty() {
+		return this.boat == null;
+	}
+	
 	public void setBoat(Boat boat2) {
 		this.boat = boat2;
 	}
