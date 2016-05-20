@@ -7,5 +7,8 @@ public class PatrolBoat extends Boat {
 		super(PATROLBOAT);
 	}
 	
-
+	@Override
+	public String toString() {
+		return "P";
+	}
 }

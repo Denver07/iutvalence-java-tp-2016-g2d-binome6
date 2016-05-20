@@ -7,5 +7,8 @@ public class Submarine extends Boat {
 	public Submarine() {
 		super(SUBMARINE);
 	}
-	
+	@Override
+	public String toString() {
+		return "S";
+	}
 }

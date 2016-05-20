@@ -7,4 +7,8 @@ public class AircraftCarrier extends Boat {
 		super(AIRCRAFT_CARRIER);
 	}
 
+	@Override
+	public String toString() {
+		return "C";
+	}
 }

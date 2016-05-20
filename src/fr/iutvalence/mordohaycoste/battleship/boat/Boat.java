@@ -24,13 +24,11 @@ public class Boat {
 	
 	public final void hit()
 	{
-		this.health=this.health-1;
-		if(this.health==0)
-		{
-			this.sunk=true;
+		if (this.sunk) {
+			// TODO Exception dans la cas où on tire un bateau mort
 		}
+		
+		this.health--;
+		this.sunk = (this.health == 0);
 	}
-	
-	
-
 }
