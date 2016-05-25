@@ -1,6 +1,14 @@
 package fr.iutvalence.mordohaycoste.battleship.boat;
-
-public class Boat {
+/**
+ *  @author costecle
+ * Class boat characterised by the health (int), Sunk(boolean)
+ * A method to decrease the health and put the status of the boat to sunk 
+ * When the health equals 0.
+ *
+ *
+ *
+ */
+public abstract class Boat {
 	
     private int health;
     private boolean sunk;
@@ -31,4 +39,6 @@ public class Boat {
 		this.health--;
 		this.sunk = (this.health == 0);
 	}
+	
+	public abstract String getName();
 }

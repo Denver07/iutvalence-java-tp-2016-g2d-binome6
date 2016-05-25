@@ -22,8 +22,6 @@ public class Grid {
 		}
 	}
 
-	// TODO Placer un bateau
-
 	public boolean putBoat(Boat boat, int x, int y, Direction direction) {
 		int i;
 		if(direction == HORIZONTAL){
