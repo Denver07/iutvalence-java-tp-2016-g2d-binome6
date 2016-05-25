@@ -12,7 +12,8 @@ public class Grid {
 
 	private final Case[][] grid;
 
-	public Grid(int player, int numgrille){
+	public Grid(int player, int numgrille)
+	{
 		this.grid = new Case[WIDTH][HEIGHT];
 
 		for(int i=0;i<WIDTH;i++){
